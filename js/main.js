@@ -22,3 +22,10 @@ function showuser(){
     text_uses[i].classList.add('active-text');
     
 }
+let togglebtn = document.getElementById('togglebtn');
+let card_1_front = document.getElementById('card_1_front');
+let card_1_back =document.getElementById('card_1_back');
+function swap(){
+    card_1_front.classList.toggle('-rotate-y-180');
+    card_1_back.classList.toggle('rotate-y-180');
+}
