@@ -25,7 +25,21 @@ function showuser(){
 let togglebtn = document.getElementById('togglebtn');
 let card_1_front = document.getElementById('card_1_front');
 let card_1_back =document.getElementById('card_1_back');
-function swap(){
+togglebtn.addEventListener('change',() =>{
     card_1_front.classList.toggle('-rotate-y-180');
     card_1_back.classList.toggle('rotate-y-180');
+})
+let head=document.getElementById('header');
+window.onscroll= () => {
+    if(window.scrollY > 100){
+        head.classList.add('bg-color-primary-dark');
+        head.classList.add('border-b');
+        head.classList.add('border-color-gray');
+        head.classList.add('shadow-lg')
+}else{
+    head.classList.remove('bg-color-primary-dark');
+    head.classList.remove('border-b');
+    head.classList.remove('border-color-gray');
+    head.classList.remove('shadow-lg')
+}
 }
